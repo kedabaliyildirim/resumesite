@@ -59,14 +59,25 @@
       <v-col cols="12" md="4">
         <v-card
           width="100%"
-          title="Objectives"
+          title="Experience"
+          color="primary"
+          subtitle="Co-Authorship"
+          text="I co-authored an article titled 'The Role of Phonological Errors in Evaluation Metrics' for DergiPark in 2023. This experience enhanced my understanding of phonological errors and their impact on evaluation metrics."
+          density="comfortable"
+        />
+      </v-col>
+      <v-col cols="12" md="4">
+        <v-card
+          width="100%"
+          title="Project"
           color="primary"
           subtitle="Current"
-          text="My current objective is finding an internship to better understand the work environment I am going to spend my life on and improve myself with experience and connections I will make along the way."
+          text="My current objective is finding an internship "
           density="comfortable"
         />
       </v-col>
     </v-row>
+    
     <v-row>
       <v-col cols="12" md="6">
         <v-card
@@ -137,12 +148,75 @@
         />
       </v-col>
     </v-row>
+
+    <!-- New Sections -->
+    <!-- Work Experience -->
+    <v-row>
+      <v-col cols="12">
+        <v-card
+          width="100%"
+          title="Experiences"
+          color="primary"
+          subtitle="Work Experience"
+          density="comfortable"
+        >
+          <!-- Your Work Experience Form Goes Here -->
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Education Information -->
+    <v-row>
+      <v-col cols="12">
+        <v-card
+          width="100%"
+          title="Education Informations"
+          color="primary"
+          subtitle="School Information"
+          density="comfortable"
+        >
+          <!-- Your Education Information Form Goes Here -->
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Projects -->
+    <v-row>
+      <v-col cols="12">
+        <v-card
+          width="100%"
+          title="Projects"
+          color="primary"
+          subtitle="Skills"
+          density="comfortable"
+        >
+          <!-- Your Projects Form Goes Here -->
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Interests -->
+    <v-row>
+      <v-col cols="12">
+        <v-card
+          width="100%"
+          title="Interests"
+          color="primary"
+          subtitle="Ex: Hobbies"
+          density="comfortable"
+        >
+          <!-- Your Interests Form Goes Here -->
+        </v-card>
+      </v-col>
+    </v-row>
+    <!-- End of New Sections -->
   </v-container>
 </template>
 
 <script lang="ts">
 import profile from "../../assets/profile.jpg";
 import { useTheme } from "vuetify";
+import { ref, watch } from "vue";
 
 export default {
   setup() {

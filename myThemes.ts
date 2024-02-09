@@ -1,34 +1,34 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
-export const thames = {
-  myLightTheme: {
+export const themes = {
+  light: {
+    name: 'Light Theme',
     dark: false,
     colors: {
-      background: "#FFFFFF",
-      surface: "#F5F5F5",
-      primary: "#6200EE",
-      "primary-darken-1": "#3700B3",
-      secondary: "#03DAC6",
-      "secondary-darken-1": "#018786",
-      error: "#B00020",
-      info: "#2196F3",
-      success: "#4CAF50",
-      warning: "#FB8C00",
+      background: '#FFFFFF',
+      surface: '#F8F9FA',
+      primary: '#007BFF', // Royal Blue
+      primaryVariant: '#0056b3', // Darker variant of primary color
+      secondary: '#17A2B8', // Cyan
+      secondaryVariant: '#108087', // Darker variant of secondary color
+      error: '#DC3545', // Red
+      info: '#17A2B8', // Cyan
+      success: '#28A745', // Green
+      warning: '#FFC107', // Yellow
     },
   },
-  myDarkTheme: {
+  dark: {
+    name: 'Dark Theme',
     dark: true,
     colors: {
-      background: "#000000",
-      surface: "#111111",
-      primary: "#007bff",
-      "primary-darken-1": "#0056b3",
-      secondary: "#7315d6",
-      "secondary-darken-1": "#c70055",
-      error: "#f44336",
-      info: "#00bcd4",
-      success: "#4caf50",
-      warning: "#ff9800",
+      background: '#343A40', // Dark Gray
+      surface: '#495057', // Gray
+      primary: '#007BFF', // Royal Blue
+      primaryVariant: '#0056b3', // Darker variant of primary color
+      secondary: '#17A2B8', // Cyan
+      secondaryVariant: '#108087', // Darker variant of secondary color
+      error: '#DC3545', // Red
+      info: '#17A2B8', // Cyan
+      success: '#28A745', // Green
+      warning: '#FFC107', // Yellow
     },
   },
 };
