@@ -1,8 +1,12 @@
-import { type } from 'os';
-import {thames} from './myThemes'
+import {
+  type
+} from 'os';
+import {
+  thames
+} from './myThemes'
 import env from 'dotenv'
 export default defineNuxtConfig({
-  target:'static',
+  target: 'static',
   ssr: false,
   security: {
     rateLimiter: {
@@ -10,11 +14,11 @@ export default defineNuxtConfig({
       interval: 'hour'
     }
   },
-  axios:{
+  axios: {
     baseURL: 'https://klavas35.github.io/resumesite/'
   },
   route: {
-    base : '/klavas35.github.io/resumesite/'
+    base: '/klavas35.github.io/resumesite/'
   },
   app: {
     baseURL: '/resumesite/'
@@ -26,27 +30,30 @@ export default defineNuxtConfig({
     ['nuxt-mail', {
       message: {
         to: process.env.EMAIL_ADDRESS,
+        cc: [], // Add CC recipients here if needed
+        bcc: [], // Add BCC recipients here if needed
       },
       smtp: {
-        to: 'smtp.mailtrap.io',
+        host: 'smtp.mailtrap.io',
         port: 465,
-        service: 'gmail',
         auth: {
           user: process.env.EMAIL_ADDRESS,
           pass: process.env.APP_PASS,
         },
-        
-    }}]],
+      },
+    }],
+  ],
+
   vuetify: {
     /* vuetify options */
     vuetifyOptions: {
-        theme: {
-            themes: {
-                Mlight :thames.myLightTheme,
-                Mdark :thames.myDarkTheme
-            },
-            defaultTheme: 'Mlight'
-        }
+      theme: {
+        themes: {
+          Mlight: thames.myLightTheme,
+          Mdark: thames.myDarkTheme
+        },
+        defaultTheme: 'Mlight'
+      }
       // Add your Vuetify options here
     },
     moduleOptions: {

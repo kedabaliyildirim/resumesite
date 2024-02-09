@@ -66,18 +66,8 @@
           density="comfortable"
         />
       </v-col>
-      <v-col cols="12" md="4">
-        <v-card
-          width="100%"
-          title="Project"
-          color="primary"
-          subtitle="Current"
-          text="My current objective is finding an internship "
-          density="comfortable"
-        />
-      </v-col>
     </v-row>
-    
+
     <v-row>
       <v-col cols="12" md="6">
         <v-card
@@ -138,6 +128,42 @@
       </v-col>
     </v-row>
     <v-row>
+      <v-col cols="12">
+        <v-card
+          width="100%"
+          title="Experiences"
+          color="primary"
+          subtitle="Work Experience"
+          density="comfortable"
+        >
+          <v-row>
+            <v-col cols="12">
+              <v-card-title>Intern</v-card-title>
+              <v-card-text>
+                <p><strong>Job Title / Position:</strong> Intern</p>
+                <p><strong>Country:</strong> Turkey</p>
+                <p><strong>City:</strong> Aydın</p>
+                <p><strong>District:</strong> Efeler</p>
+                <p>
+                  <strong>Company / Employer:</strong> Aydın Adnan Menderes
+                  University
+                </p>
+                <p><strong>Start Date:</strong> 03/07/2023</p>
+                <p><strong>End Date:</strong> 28/07/2023</p>
+                <p><strong>Experience:</strong> 0.07</p>
+                <p><strong>Reason for Leaving:</strong> Internship was over</p>
+                <p><strong>Salary Received:</strong> 0</p>
+                <p>
+                  <strong>Duties and Responsibilities:</strong> Research on
+                  Machine Translation Metrics
+                </p>
+              </v-card-text>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="12" md="12">
         <v-card
           width="100%"
@@ -149,72 +175,13 @@
       </v-col>
     </v-row>
 
-    <!-- New Sections -->
-    <!-- Work Experience -->
-    <v-row>
-      <v-col cols="12">
-        <v-card
-          width="100%"
-          title="Experiences"
-          color="primary"
-          subtitle="Work Experience"
-          density="comfortable"
-        >
-          <!-- Your Work Experience Form Goes Here -->
-        </v-card>
-      </v-col>
-    </v-row>
-
     <!-- Education Information -->
-    <v-row>
-      <v-col cols="12">
-        <v-card
-          width="100%"
-          title="Education Informations"
-          color="primary"
-          subtitle="School Information"
-          density="comfortable"
-        >
-          <!-- Your Education Information Form Goes Here -->
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- Projects -->
-    <v-row>
-      <v-col cols="12">
-        <v-card
-          width="100%"
-          title="Projects"
-          color="primary"
-          subtitle="Skills"
-          density="comfortable"
-        >
-          <!-- Your Projects Form Goes Here -->
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- Interests -->
-    <v-row>
-      <v-col cols="12">
-        <v-card
-          width="100%"
-          title="Interests"
-          color="primary"
-          subtitle="Ex: Hobbies"
-          density="comfortable"
-        >
-          <!-- Your Interests Form Goes Here -->
-        </v-card>
-      </v-col>
-    </v-row>
     <!-- End of New Sections -->
   </v-container>
 </template>
 
 <script lang="ts">
-import profile from "../../assets/profile.jpg";
+import profile from "@/assets/profile.jpg";
 import { useTheme } from "vuetify";
 import { ref, watch } from "vue";
 

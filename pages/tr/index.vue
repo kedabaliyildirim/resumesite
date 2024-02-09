@@ -1,78 +1,81 @@
 <template>
   <v-container style="margin-top: 3%">
     <v-row>
-      <v-col>
+      <v-col cols="12" md="4">
         <v-card
           style="
             border-radius: 100%;
             margin: 0;
             padding: 0;
-            margin-left: 20%;
-            width: 45%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
           "
         >
           <v-img
             width="100%"
-            aspect-ratio="16/9"
-            cover
+            aspect-ratio="1/1"
+            contain
             :src="profile"
             aria-label="Profil Resmi"
           />
         </v-card>
       </v-col>
-      <v-col>
+      <v-col cols="12" md="8">
         <h1>Kürşat Edabalı Yıldırım</h1>
         <v-card
-          width="95%"
+          width="100%"
           color="secondary"
           subtitle="Bilgisayar Mühendisliği Öğrencisi"
-          text="Merhaba, Adnan Menderes Üniversitesi'nde bilgisayar bilimleri ve mühendisliği öğrencisiyim. Çocukluğumdan beri bilgisayarlarla uğraşmayı ve onlarla ilgili problemleri çözmeyi severdim. Hatta kuzenime web sitelerinde yaratıcı yazılar yazarak ve mantıksal hataları bulmada yardımcı oldum. Her zaman hayal ettiğim alanda çalışmaktan heyecan duyuyorum."
+          text="Merhaba, Adnan Menderes Üniversitesi'nde bilgisayar bilimleri ve mühendisliği öğrencisiyim. Çocukluğumdan beri bilgisayarlarla uğraşmayı ve onlarla ilgili problemleri çözmeyi sevdim. Kuzenime web sitelerini oluşturmada yaratıcı yazım ve sitelerindeki mantıksal hataları bulma gibi bazı konularda yardımcı oldum. Her zaman hayalini kurduğum alanda çalışmaktan heyecan duyuyorum."
           density="comfortable"
         />
-        <v-card
-          style="margin-left: 5%"
-          color="primary"
-          width="95%"
-          title="Eğitim"
-          text="Mevcut eğitimim biraz açıklama gerektiriyor. Aslında ben İstanbul Aydın Üniversitesi'nde öğrenciyim, ancak engellilik ve ekonomik sınırlamalar nedeniyle eğitimimi Adnan Menderes Üniversitesi'nde sürdürüyorum."
-        ></v-card>
-        <v-card title="Engeller" color="secondary"
-          ><strong style="margin-left: 0.6%">Sağ Göz:</strong> Sağ gözüm protez<br />
-          <strong style="margin-left: 0.6%">Sol Göz:</strong> Sol gözüm 5.5 hipermetropik ve 0.75 astigmat</v-card
-        >
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
+      <v-col cols="12" md="4">
         <v-card
-          width="95%"
+          width="100%"
+          color="primary"
+          title="Eğitim"
+          text="Mevcut eğitimim biraz açıklamaya ihtiyaç duyuyor. Gerçek üniversitem İstanbul Aydın Üniversitesi, ancak engellilik ve ekonomik kısıtlamalar nedeniyle eğitimimi Adnan Menderes Üniversitesi'nde alıyorum."
+        ></v-card>
+        <v-card title="Engellilikler" color="secondary">
+          <strong>Sağ Göz:</strong> Sağ gözüm protez<br />
+          <strong>Sol Göz:</strong> Sol gözüm 5.5 hipermetropik ve 0.75 astigmatik
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="4">
+        <v-card
+          width="100%"
           title="Eğitim"
           color="primary"
           subtitle="Adnan Menderes Üniversitesi"
-          density="comfortable"
-        />
-        <v-card
-          width="95%"
-          color="secondary"
-          subtitle="İstanbul Aydın Üniversitesi"
-          text="Şu anda Adnan Menderes Üniversitesi'nde okuyorum, aslen İstanbul Aydın Üniversitesi'ndenim, ancak engellilik nedeniyle çalışmalarımı Adnan Menderes Üniversitesi'nde sürdürüyorum."
+          text="Şu anda Adnan Menderes Üniversitesi'nde okuyorum. Aslen İstanbul Aydın Üniversitesi'ndenim, ancak engellilik nedeniyle çalışmalarımı Adnan Menderes Üniversitesi'nde yürütüyorum."
           density="comfortable"
         />
       </v-col>
-      <v-col>
+      <v-col cols="12" md="4">
         <v-card
-          width="95%"
-          title="Hedefler"
+          width="100%"
+          title="Deneyim"
           color="primary"
-          subtitle="Yakın Zamanlı Hedefler"
-          text="Mevcut hedefim, hayatımı geçireceğim iş ortamını daha iyi anlamak, deneyim ve yapacağım bağlantılarla kendimi geliştirmek için staj bulmaktır."
+          subtitle="Ortak Yazarlık"
+          text="2023 yılında DergiPark için 'Değerlendirme Metriklerinde Fonetik Hataların Rolü' başlıklı bir makalede ortak yazarlık yaptım. Bu deneyim, fonetik hataların ve bunların değerlendirme metriklerine etkisinin anlaşılmasını artırdı."
           density="comfortable"
         />
       </v-col>
     </v-row>
+
     <v-row>
-      <v-col>
-        <v-card width="95%" title="Hobiler" density="comfortable">
+      <v-col cols="12" md="6">
+        <v-card
+          width="100%"
+          :style="secondat"
+          title="Hobiler"
+          density="comfortable"
+          subtitle="Yapılacak Şeyler"
+        >
           <v-list>
             <v-list-item :style="primat" append-icon="mdi-book-open"
               >Okuma</v-list-item
@@ -81,139 +84,105 @@
               >Kodlama</v-list-item
             >
             <v-list-item :style="primat" append-icon="mdi-semantic-web"
-              >Yeni Framework ve Diller Öğrenme</v-list-item
+              >Yeni Teknolojiler Öğrenme</v-list-item
             >
-            <v-list-item :style="secondat" append-icon="mdi-train-car"
-              >Seyahat</v-list-item
-            >
-            <v-list-item :style="primat" append-icon="mdi-music-circle-outline"
-              >Müzik</v-list-item
+            <v-list-item :style="secondat" append-icon="mdi-camera"
+              >Fotoğrafçılık</v-list-item
             >
           </v-list>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col cols="12" md="6">
         <v-card
-          color="primary"
-          width="95%"
+          width="100%"
           title="Yetenekler"
-          density="comfortable"
-          style="margin-left: 1%"
+          subtitle="Programlama Dilleri ve Araçlar"
+          color="primary"
+          dense
         >
-          <v-table>
-            <thead>
-              <tr :style="secondat">
-                <th  class="text-left">Ad</th>
-                <th class="text-right">Seviye</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr :style="primat">
-                <td ><v-icon icon="mdi-language-java"></v-icon> Java</td>
-                <td class="text-right">
-                  <div style="background-color: gray">
-                    <div
-                      style="background-color: #f44336; padding: 4%; width: 85%"
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-              <tr :style="secondat">
-                <td> <v-icon icon="mdi-language-javascript"></v-icon> Javascript</td>
-                <td class="text-right">
-                  <div style="background-color: lightblue">
-                    <div
-                      style="background-color: #2196f3; padding: 4%; width: 90%"
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-              <tr :style="primat">
-                <td><v-icon icon="mdi-database-search"></v-icon> TSQL</td>
-                <td class="text-right">
-                  <div style="background-color: gray">
-                    <div
-                      style="background-color: #f44336; padding: 4%; width: 75%"
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-              <tr :style="secondat">
-                <td><v-icon icon="mdi-database-eye"></v-icon> NOSQL (mongoose ile Mongodb kullanımı)</td>
-                <td class="text-right">
-                  <div style="background-color: lightblue">
-                    <div
-                      style="background-color: #2196f3; padding: 4%; width: 70%"
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-              <tr :style="primat">
-                <td><v-icon icon="mdi-language-c"></v-icon> C (programlama dili)</td>
-                <td class="text-right">
-                  <div style="background-color: gray">
-                    <div
-                      style="background-color: #f44336; padding: 4%; width: 70%"
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-              <tr :style="secondat">
-                <td><v-icon icon="mdi-language-csharp"></v-icon> C#</td>
-                <td class="text-right">
-                  <div style="background-color: lightblue">
-                    <div
-                      style="background-color: #2196f3; padding: 4%; width: 65%"
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-              <tr :style="primat">
-                <td><v-icon icon="mdi-language-cpp"></v-icon> C++</td>
-                <td class="text-right">
-                  <div style="background-color: gray">
-                    <div
-                      style="background-color: #f44336; padding: 4%; width: 80%"
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </v-table>
+          <v-list>
+            <v-list-item :style="primat" append-icon="mdi-language-c"
+              >C</v-list-item
+            >
+            <v-list-item :style="secondat" append-icon="mdi-language-cpp"
+              >C++</v-list-item
+            >
+            <v-list-item :style="primat" append-icon="mdi-language-java"
+              >Java</v-list-item
+            >
+            <v-list-item :style="secondat" append-icon="mdi-language-python"
+              >Python</v-list-item
+            >
+            <v-list-item :style="primat" append-icon="mdi-language-javascript"
+              >JavaScript</v-list-item
+            >
+            <v-list-item :style="secondat" append-icon="mdi-language-html5"
+              >HTML</v-list-item
+            >
+            <v-list-item :style="primat" append-icon="mdi-language-css3"
+              >CSS</v-list-item
+            >
+          </v-list>
         </v-card>
       </v-col>
     </v-row>
-    <v-col color="red" cols="12" md="10" style="margin-top: 3%">
-      <v-card
-        title="Son Sözler"
-        class="text-center"
-        width="50%"
-        color="primary"
-        style="margin-left: 35%"
-        text="
-Öğrenci olarak, yeni iş deneyimleri kazanmayı ve daha büyük bir bütünün parçası olmayı dört gözle bekliyorum. Amacım, öğrenmek, büyümek, bir ekip için faydalı olmak ve söz konusu ekiple önemli bir şeyler yapmaktır. İyi bir dinleyici olarak, talimatları takip edebilir ve işle ilgili sorunları anlamak ve çözmek için gerekli araçları kullanabilirim. Çalışma deneyimi kazanmak önemlidir ve deneyim, çalışma ortamında, günlük hayatta veya herhangi bir konuda elde edilebilecek en önemli şeylerden biridir."
-      ></v-card>
-    </v-col>
-    <v-col cols="12" md="100">
-      <v-card color="primary" style="padding: 0.5%; border-radius: 30%"> </v-card>
-      <v-card
-        width="5%"
-        color="secondary"
-        style="
-          margin-top: -1.3%;
-          padding: 0.8%;
-          margin-left: 47.5%;
-          border-radius: 35%;
-        "
-      ></v-card>
-    </v-col>
+    <v-row>
+      <v-col cols="12">
+        <v-card
+          width="100%"
+          title="Deneyimler"
+          color="primary"
+          subtitle="İş Deneyimi"
+          density="comfortable"
+        >
+          <v-row>
+            <v-col cols="12">
+              <v-card-title>Stajyer</v-card-title>
+              <v-card-text>
+                <p><strong>İş Başlığı / Pozisyon:</strong> Stajyer</p>
+                <p><strong>Ülke:</strong> Türkiye</p>
+                <p><strong>Şehir:</strong> Aydın</p>
+                <p><strong>İlçe:</strong> Efeler</p>
+                <p>
+                  <strong>Şirket / İşveren:</strong> Aydın Adnan Menderes
+                  Üniversitesi
+                </p>
+                <p><strong>Başlangıç Tarihi:</strong> 03/07/2023</p>
+                <p><strong>Bitiş Tarihi:</strong> 28/07/2023</p>
+                <p><strong>Deneyim:</strong> 0.07</p>
+                <p><strong>Ayrılma Nedeni:</strong> Staj sona erdi</p>
+                <p><strong>Aldığı Maaş:</strong> 0</p>
+                <p>
+                  <strong>Görevler ve Sorumluluklar:</strong> Makine Çeviri
+                  Metrikleri üzerine araştırma
+                </p>
+              </v-card-text>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" md="12">
+        <v-card
+          width="100%"
+          title="Son Söz"
+          color="secondary"
+          text="Bir öğrenci olarak, yeni iş deneyimleri kazanmayı ve daha büyük, daha önemli bir parçası olmayı dört gözle bekliyorum. Amacım, öğrenmek, büyümek, bir ekip için yararlı olmak ve söz konusu ekiple önemli bir şeyler yapmaktır. Dikkatli bir dinleyici olarak direktifleri takip edebilir ve işle ilgili sorunları anlamak ve çözmek için gerekli araçları kullanabilirim, çalışma deneyimi kazanmak önemlidir ve biri çalışma ortamında, günlük yaşamda veya herhangi bir şeyde, deneyim, belki de en önemli şeylerden biridir."
+          density="comfortable"
+        />
+      </v-col>
+    </v-row>
+
+    <!-- Eğitim Bilgileri -->
+    <!-- Yeni Bölümlerin Sonu -->
   </v-container>
-  
 </template>
 
 <script lang="ts">
-import profile from "../../assets/profile.jpg";
+import profile from "@/assets/profile.jpg";
 import { useTheme } from "vuetify";
+import { ref, watch } from "vue";
 
 export default {
   setup() {
